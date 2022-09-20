@@ -10,7 +10,7 @@ export function init(params) {
       counterEl.textContent = String(counter);
       if (counter < 1) {
          clearInterval(contadorTime);
-        // params.goTo("/ppt/reintentar");
+         params.goTo("/ppt/reintentar");
       }
    }, 1000)
 

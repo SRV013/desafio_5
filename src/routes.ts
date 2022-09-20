@@ -40,8 +40,6 @@ export function initRouter(container: Element) {
           }
        });
     }
-    goTo('/inicio')
-    console.log(location.pathname);
-    
+    goTo('/inicio')    
     handleRoute(location.pathname);
 } 
