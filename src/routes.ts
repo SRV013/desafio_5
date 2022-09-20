@@ -41,6 +41,6 @@ export function initRouter(container: Element) {
           }
        });
     }
-    goTo('/inicio')
+    goTo('/juego-ppt//inicio')
     handleRoute(location.pathname);
 } 
