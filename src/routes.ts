@@ -28,20 +28,14 @@ const routes = [
  const BASE_PATH = "/juego-ppt";
  function isGithubPages() {
    return location.host.includes("github.io");}
-
    export function initRouter(container: any) {
       function goTo(path) {
-  
           const completePath = isGithubPages() ? BASE_PATH + path : path;
-  
           history.pushState({}, "", completePath);
           handleRoute(completePath);
       }
       function handleRoute(route) {
-          console.log("el handler recibio una nueva ruta", route);
-          const newRoute = isGithubPages() ? route.replace(BASE_PATH, "") : route;
-  
-  
+          const newRoute = isGithubPages() ? route.replace(BASE_PATH, "") : route;  
           for (const r of routes) {
               if (r.path.test(newRoute)) {
                   const el: any = r.component({ goTo: goTo });
