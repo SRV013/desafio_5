@@ -1382,7 +1382,13 @@ customElements.define("tipo-boton", class Button extends HTMLElement {
             transition: 0.25s;
             transform: scale(1.2);
             cursor: pointer;
-         }`;
+         }
+         @media (max-width:500px) {
+            .boton-el {
+               font-size: 20px;
+            }
+          }
+         `;
         button.textContent = this.textContent;
         this.shadow.appendChild(button);
         this.shadow.appendChild(style);
