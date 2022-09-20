@@ -25,13 +25,8 @@ const routes = [
         component: initMArcador,
      },
  ];
- const BASE_PATH = "/juego-ppt";
- function isGithubPages() {
-   return location.host.includes("github.io");}
-
 export function initRouter(container: Element) {
     function goTo(path) {
-      const completePath = isGithubPages() ? BASE_PATH + path : path;
        history.pushState({}, "", path);
        handleRoute(path);
     }
@@ -47,5 +42,6 @@ export function initRouter(container: Element) {
     }
     goTo('/inicio')
     console.log(location.pathname);
+    
     handleRoute(location.pathname);
 } 
