@@ -514,7 +514,7 @@ function initRouter(container) {
             }
         });
     }
-    goTo('/juego-ppt//inicio');
+    goTo('/juego-ppt/inicio');
     handleRoute(location.pathname);
 }
 
