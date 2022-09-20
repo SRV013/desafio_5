@@ -894,7 +894,10 @@ function init(params) {
         counter--;
         const counterEl = div.querySelector(".timer-el");
         counterEl.textContent = String(counter);
-        if (counter < 1) clearInterval(contadorTime);
+        if (counter < 1) {
+            clearInterval(contadorTime);
+            params.goTo("/ppt/reintentar");
+        }
     }, 1000);
     div.innerHTML = `
    <div class="tipo-top">
