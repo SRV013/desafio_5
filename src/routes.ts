@@ -41,5 +41,6 @@ export function initRouter(container: Element) {
           }
        });
     }
+    goTo('/inicio')
     handleRoute(location.pathname);
 } 
