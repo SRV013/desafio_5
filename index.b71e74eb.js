@@ -590,7 +590,6 @@ function initRouter(container) {
         });
     }
     goTo("/inicio");
-    console.log(location.pathname);
     handleRoute(location.pathname);
 }
 
