@@ -93,6 +93,7 @@ const tipopiedra = div.querySelector(".piedra") as Element;
 const tipopapel = div.querySelector(".papel") as Element;
 const tipopiedraTop = div.querySelector(".piedra-top") as Element;
 const tipopapelTop = div.querySelector(".papel-top") as Element;
+const tipotijeraTop = div.querySelector(".tijera-top") as Element;
 // PASA FUNCION A LO ELEGIDO POR EL USUARIO
 for (const tipos of tiposCont.children) {
    tipos.addEventListener("click", () => {
@@ -130,7 +131,7 @@ for (const tipos of tiposCont.children) {
       setTimeout(() => {
          const movimientoCpu = state.getState().elJuego.pcJugada;         
          if (movimientoCpu == "tijera") {
-            tipopiedraTop.classList.add("tipo-top-activos");}
+            tipotijeraTop.classList.add("tipo-top-activos");}
          if (movimientoCpu == "piedra") {
             tipopiedraTop.classList.add("tipo-top-activos");}
          if (movimientoCpu == "papel") {
